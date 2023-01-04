@@ -4,8 +4,9 @@
 const DOMSelectors = {
   button: document.getElementById("btn"),
   text: document.querySelector("#text"),
-  empty: document.querySelector(".nothing"),
+  box: document.getElementById("big-black-box"),
   //use "." for classes in querySelector
-  point: document.querySelectorAll(".point"),
+  points: document.querySelectorAll(".point"),
 };
+
 console.log(DOMSelectors);
