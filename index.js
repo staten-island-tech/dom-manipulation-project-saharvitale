@@ -10,9 +10,10 @@ const DOMSelectors = {
   points: document.querySelectorAll(".point"),
 };
 
-function backgroundaTxt(background, text) {
+function backgroundAndText(background, text) {
   background.style.backgroundColor = "red";
-  text.innerHTML = "this is a red box";
+  text.textContent = "this is a red box";
+  text.style.fontSize = "40px";
 }
 
-backgroundaTxt(DOMSelectors.box, DOMSelectors.text);
+backgroundAndText(DOMSelectors.box, DOMSelectors.text);
