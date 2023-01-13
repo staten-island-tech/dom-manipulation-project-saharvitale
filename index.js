@@ -7,7 +7,7 @@ const DOMSelectors = {
   //use "#" for ids in querySelector
   box: document.getElementById("big-black-box"),
   //use "." for classes in querySelector
-  points: document.querySelectorAll(".point"),
+  points: document.querySelectorAll(".point"), //node list
 };
 
 function backgroundAndText(background, text) {
@@ -15,5 +15,15 @@ function backgroundAndText(background, text) {
   text.textContent = "this is a red box";
   text.style.fontSize = "40px";
 }
+DOMSelectors.button.addEventListener("click", function () {
+  backgroundAndText(DOMSelectors.box, DOMSelectors.text);
+});
 
-backgroundAndText(DOMSelectors.box, DOMSelectors.text);
+function changeLi() {
+  DOMSelectors.points.forEach((point) => {
+    point.addEventListener("click", function () {
+      point.textContent = "hello";
+    });
+  });
+}
+changeLi();
